@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>XHTML Practice</title>
+	<link rel="stylesheet" type="text/css" href="xhtmlPracStyle.css" />
+	<style>
+	.special
+	{
+		
+		color: blue;
+	}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<p>My Site</p>
+	</div>
+	
+	<ul class="list">
+		<li>one</li>
+		<li class="special">two</li>
+		<li>three</li>
+		<li>
+			<ul class="sublist">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<button id="toCoolSite">Thing</button>
+	
+	<input type="text" id="name">
+	
+	<div id="footer">Blah blah footer</div>
+	
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js">
+	</script>
+	
+	<script>
+		$(function() {
+			
+			$('.list').click(function() {
+				$(this).find('li').filter(':last').addClass('special');
+			})
+			
+		});
+	</script>
+</body>
+</html>
